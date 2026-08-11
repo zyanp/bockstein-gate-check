@@ -1,7 +1,7 @@
 # bockstein-gate-check
 
 CSS 符号における横断的（transversal）対角ゲートの実装可否を判定する最小プロトタイプ。
-arXiv:2602.14499（J. Haruna, "Homological origin of transversal implementability of logical diagonal gates in quantum CSS codes"）の判定原理を、既知の小規模符号で数値的に裏付けるためのもの（科研費申請の裏付け資料）。
+arXiv:2602.14499（J. Haruna, "Homological origin of transversal implementability of logical diagonal gates in quantum CSS codes"）の判定原理の最小リファレンス実装で、既知の小規模符号に対して判定を数値的に検証する。
 
 純 Python・外部依存なし。
 
@@ -55,7 +55,7 @@ python test_known.py   # 判定＋既知事実テスト（結果表を表示）
 
 - **Steane: 横断的 S 可・横断的 T 不可**（arXiv:2602.14499 Cor V.1 の再現）。T 不可は**非一様角度を許しても**成立（レベル 3 の解の論理位相がすべて偶数 = 2·Z_8）。さらに θ = 3·1_7（各量子ビットに S†）が論理 S になることを総当たり検証で確認（Cor V.1 の具体解と一致）。
 - **RM [[15,1,3]]: 横断的 T 可**。θ = 1_15（各量子ビットに T）で論理位相 7 mod 8（= 論理 T†）を総当たり検証で確認（古典的既知事実と一致）。
-- **回転表面符号: 横断的 T 不可**（既知）。**横断的 S も不可**（達成可能位相は 2·Z_4、すなわち論理 Z まで）。申請調書・図 4 の主張「回転表面符号では横断的 S 不可」を裏付ける。
+- **回転表面符号: 横断的 T 不可**（既知）。**横断的 S も不可**であることを確認（達成可能位相は 2·Z_4、すなわち論理 Z まで）。
 
 副次的観察: Steane のレベル 3 の位相部分群が 2·Z_8 であることは「レベル 3 の横断的ゲートで出せるのは高々論理 S（ω_8^2 = i）まで」を意味し、レベル 2→3 の持ち上げ障害（論文の β 写像）の非消滅と整合する。
 

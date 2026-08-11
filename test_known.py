@@ -9,8 +9,8 @@ Expected (known) facts:
                                             even for non-uniform angles)
   RM      [[15,1,3]]: transversal T  YES   (classic result, T^x15 = logical T^dag)
   Surface [[9,1,3]] : transversal T  NO    (known)
-  Surface [[9,1,3]] : transversal S  NO    (claim to be verified; grant
-                                            application Fig. 4)
+  Surface [[9,1,3]] : transversal S  NO    (verified here: achievable
+                                            phases are 2*Z_4, logical Z only)
 """
 
 import sys
@@ -98,7 +98,7 @@ def main():
            results[(rm, 3)]["feasible"])
     report("Surface: transversal T infeasible (known)",
            not results[(sf, 3)]["feasible"])
-    report("Surface: transversal S infeasible (application Fig.4 claim)",
+    report("Surface: transversal S infeasible (verified here)",
            not results[(sf, 2)]["feasible"])
 
     # ------------------------------------------------------------------
